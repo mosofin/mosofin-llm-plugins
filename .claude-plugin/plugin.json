@@ -1,0 +1,20 @@
+{
+  "name": "mosofin",
+  "displayName": "MosoFin",
+  "version": "0.2.0",
+  "description": "Connect Claude Code to MosoFin: authenticated, workspace-scoped, read-only business data across connected SaaS platforms.",
+  "author": {
+    "name": "MosoFin"
+  },
+  "homepage": "https://mosofin.com",
+  "keywords": ["mosofin", "mcp", "finance", "quickbooks", "workspace"],
+  "license": "MIT",
+  "userConfig": {
+    "mcp_url": {
+      "type": "string",
+      "title": "MosoFin MCP URL",
+      "description": "Streamable HTTP endpoint for the MosoFin MCP server. Use production unless you are testing a tunnel or staging host.",
+      "default": "https://mcp.mosofin.com/mcp"
+    }
+  }
+}
