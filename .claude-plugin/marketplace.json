@@ -10,7 +10,7 @@
       "name": "mosofin",
       "source": "./",
       "description": "Connect Claude Code to MosoFin: authenticated, workspace-scoped, read-only business data across connected SaaS platforms.",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "author": {
         "name": "MosoFin"
       },

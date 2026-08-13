@@ -59,7 +59,16 @@ The server's OAuth metadata must advertise that same URL.
 | Skill | When to use |
 |-------|-------------|
 | `/mosofin:query-workspace` | Any MosoFin data question: confirm workspace, list connections, invoke a read tool |
+| `/mosofin:financial-reports` | Period statements: P&L, balance sheet, cash flow, trial balance, general ledger |
+| `/mosofin:aging-review` | A/R and A/P aging, customer/vendor balances, overdue drill-downs |
+| `/mosofin:find-transactions` | Search invoices, bills, payments, and other records; get-by-id lookups |
+| `/mosofin:budget-review` | List budgets, budget details, budget vs actuals |
+| `/mosofin:connections` | Which company files are connected and their status; reconnect guidance |
 | `/mosofin:save-skill` | After results exist, save the proven workflow as a reusable skill (explicit consent) |
+
+The focused skills are entry points over the same 7-tool MCP surface and the
+same gates (workspace confirmation, entity choice, grounding). They add no
+new tools; `/mosofin:query-workspace` remains the general path.
 
 ## Agents
 
