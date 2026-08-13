@@ -26,7 +26,7 @@ marketplace with `claude plugin marketplace add mosofin/mosofin-llm-plugins`.
 ## Install (local development)
 
 ```bash
-claude --plugin-dir /path/to/MosoFin-Plugin
+claude --plugin-dir /path/to/mosofin-llm-plugins
 ```
 
 Then:
