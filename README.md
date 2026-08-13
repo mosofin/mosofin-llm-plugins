@@ -56,19 +56,21 @@ The server's OAuth metadata must advertise that same URL.
 
 ## Skills
 
-| Skill | When to use |
-|-------|-------------|
-| `/mosofin:query-workspace` | Any MosoFin data question: confirm workspace, list connections, invoke a read tool |
-| `/mosofin:financial-reports` | Period statements: P&L, balance sheet, cash flow, trial balance, general ledger |
-| `/mosofin:aging-review` | A/R and A/P aging, customer/vendor balances, overdue drill-downs |
-| `/mosofin:find-transactions` | Search invoices, bills, payments, and other records; get-by-id lookups |
-| `/mosofin:budget-review` | List budgets, budget details, budget vs actuals |
-| `/mosofin:connections` | Which company files are connected and their status; reconnect guidance |
-| `/mosofin:save-skill` | After results exist, save the proven workflow as a reusable skill (explicit consent) |
+One skill per MCP server capability, plus the two end-to-end workflows:
 
-The focused skills are entry points over the same 7-tool MCP surface and the
-same gates (workspace confirmation, entity choice, grounding). They add no
-new tools; `/mosofin:query-workspace` remains the general path.
+| Skill | Server tool | When to use |
+|-------|-------------|-------------|
+| `/mosofin:workspaces` | `list_workspaces` | List, confirm, or switch the workspace for this chat |
+| `/mosofin:connections` | `get_agent_datasources` | Which company files are connected, status, reconnect guidance |
+| `/mosofin:list-tools` | `get_datasource_tools` | What API operations are available and their policy |
+| `/mosofin:run-tool` | `invoke_datasource_api_tool` | Run one named catalog operation |
+| `/mosofin:list-skills` | `get_skills` | List saved MosoFin skills in the workspace |
+| `/mosofin:replay-skill` | `get_my_skill` (+ invoke) | Replay a saved skill after explicit consent |
+| `/mosofin:query-workspace` | full read pipeline | Any open data question, end to end |
+| `/mosofin:save-skill` | `create_skill` (+ list/replay) | Save a proven workflow after results exist |
+
+All skills share the same gates: workspace confirmation first, companies by
+`display_name`, opaque handles only, grounding with provenance.
 
 ## Agents
 
