@@ -16,12 +16,12 @@ This repository is also a one-plugin marketplace
 GitHub repository, anyone can install it:
 
 ```text
-/plugin marketplace add <github-owner>/MosoFin-Plugin
+/plugin marketplace add mosofin/mosofin-llm-plugins
 /plugin install mosofin@financehub
 ```
 
 Or from the shell: `claude plugin install mosofin@financehub` after adding the
-marketplace with `claude plugin marketplace add <github-owner>/MosoFin-Plugin`.
+marketplace with `claude plugin marketplace add mosofin/mosofin-llm-plugins`.
 
 ## Install (local development)
 
