@@ -17,10 +17,10 @@ GitHub repository, anyone can install it:
 
 ```text
 /plugin marketplace add <github-owner>/MosoFin-Plugin
-/plugin install mosofin@mosofin
+/plugin install mosofin@financehub
 ```
 
-Or from the shell: `claude plugin install mosofin@mosofin` after adding the
+Or from the shell: `claude plugin install mosofin@financehub` after adding the
 marketplace with `claude plugin marketplace add <github-owner>/MosoFin-Plugin`.
 
 ## Install (local development)

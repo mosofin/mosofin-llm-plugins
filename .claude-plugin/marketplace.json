@@ -1,6 +1,6 @@
 {
-  "name": "mosofin",
-  "description": "Official MosoFin marketplace: the mosofin plugin connecting Claude Code to workspace-scoped, read-only business data.",
+  "name": "financehub",
+  "description": "FinanceHub marketplace by MosoFin: the mosofin plugin connecting Claude Code to workspace-scoped, read-only business data.",
   "owner": {
     "name": "MosoFin",
     "url": "https://mosofin.com"
