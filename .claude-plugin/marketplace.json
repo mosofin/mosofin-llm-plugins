@@ -3,7 +3,8 @@
   "description": "FinanceHub marketplace by MosoFin: the mosofin plugin connecting Claude Code to workspace-scoped, read-only business data.",
   "owner": {
     "name": "MosoFin",
-    "url": "https://mosofin.com"
+    "url": "https://mosofin.com",
+    "email": "support@mosofin.com"
   },
   "plugins": [
     {
@@ -12,11 +13,18 @@
       "description": "Connect Claude Code to MosoFin: authenticated, workspace-scoped, read-only business data across connected SaaS platforms.",
       "version": "0.4.0",
       "author": {
-        "name": "MosoFin"
+        "name": "MosoFin",
+        "email": "support@mosofin.com"
       },
       "homepage": "https://mosofin.com",
       "license": "MIT",
-      "keywords": ["mosofin", "mcp", "finance", "quickbooks", "workspace"]
+      "keywords": [
+        "mosofin",
+        "mcp",
+        "finance",
+        "quickbooks",
+        "workspace"
+      ]
     }
   ]
 }
