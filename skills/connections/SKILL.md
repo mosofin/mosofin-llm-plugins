@@ -11,6 +11,13 @@ allowed-tools:
 Status-only path; fetches no accounting data. Same contract as
 `/mosofin:query-workspace`. Full spec: `docs/mcp-tool-spec.md`.
 
+## If MosoFin tools are missing
+
+If MosoFin tools are absent or a call returns `Unknown tool`: tell the user
+to enable/connect the MosoFin connector **in this LLM app**, sign in, then
+retry. Do not invent status. A disconnected QuickBooks file is a different
+problem (`reconnect_url` / MosoFin data-sources page).
+
 ## Steps
 
 1. Confirm workspace via `list_workspaces` if this chat has not already.

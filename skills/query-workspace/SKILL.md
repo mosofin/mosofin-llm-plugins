@@ -71,6 +71,10 @@ the boundary and offer the read equivalent (e.g. `search_invoices`).
 
 ## Errors
 
+- **Unknown tool / MosoFin tools missing** — the connector is not connected
+  in this LLM app. Tell the user to enable it here (Claude Code: install the
+  plugin; Codex or ChatGPT: add the MosoFin connector), sign in, then retry.
+  Do not invent data. This is not a QuickBooks reconnect.
 - **Workspace not confirmed** — confirm via `list_workspaces` then retry.
 - **`entity_required`** — ask which company from `entities[]`; retry with that
   `data_source_id`.

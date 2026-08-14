@@ -31,6 +31,8 @@ tool**. Full spec: `docs/mcp-tool-spec.md` §3.4. For open-ended questions
    `data_source_id` (both on **every** call and retry — the server is
    stateless). Independent invokes may batch in parallel.
 5. Handle results and errors:
+   - `Unknown tool` / MosoFin tools missing → tell the user to enable the
+     MosoFin connector in this LLM app, sign in, then retry. No data.
    - `pagination.has_more` → re-invoke with
      `params.offset = pagination.next_offset`.
    - `approval_required` → ask the user, retry the **same** invoke with

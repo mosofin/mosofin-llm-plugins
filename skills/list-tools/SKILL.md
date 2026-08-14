@@ -14,6 +14,12 @@ Wraps the server's `get_datasource_tools` tool: the catalog of allowed
 inner operations like `search_invoices` are never top-level MCP tools, and a
 `tool_name` must never be invented. Full spec: `docs/mcp-tool-spec.md` §3.3.
 
+## If MosoFin tools are missing
+
+If MosoFin tools are absent or a call returns `Unknown tool`: tell the user
+to enable/connect the MosoFin connector **in this LLM app**, sign in, then
+retry. Do not invent catalog entries.
+
 ## Steps
 
 1. Confirm workspace via `list_workspaces` if this chat has not already.

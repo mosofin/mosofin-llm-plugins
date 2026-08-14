@@ -28,6 +28,12 @@ tool (`start_goal`, `clarify_goal`, `generate_goal_brief`, `confirm_completion`)
 Native consent pickers may not appear. Ask in chat, then pass
 `confirmed="yes"` only after an explicit yes.
 
+## If MosoFin tools are missing
+
+If MosoFin tools are absent or a call returns `Unknown tool`: tell the user
+to enable/connect the MosoFin connector **in this LLM app**, sign in, then
+retry. Do not claim a skill was saved.
+
 ## Workspace first
 
 If this chat has not confirmed a workspace, call `list_workspaces` and confirm

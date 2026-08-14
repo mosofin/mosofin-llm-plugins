@@ -10,6 +10,17 @@ allowed-tools:
 Wraps the server's `list_workspaces` tool: the mandatory first gate before any
 MosoFin data or skill tool. Full spec: `docs/mcp-tool-spec.md` §3.1.
 
+## If MosoFin tools are missing
+
+If `list_workspaces` is not in this session's tool list, or a call returns
+`Unknown tool` (e.g. `mosofin.list_workspaces`): the MosoFin **connector is
+not connected** in this LLM app. That is not a QuickBooks reconnect problem.
+
+- Do not invent workspaces or data.
+- Tell the user to enable/connect the MosoFin connector **in this product**
+  (Claude Code: install the plugin; Codex or ChatGPT: add the MosoFin
+  connector), complete sign-in, then retry this skill.
+
 ## Steps
 
 1. Call `list_workspaces` with no arguments (discovery).

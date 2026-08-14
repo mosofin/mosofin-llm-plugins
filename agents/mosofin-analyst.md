@@ -27,7 +27,9 @@ via the MosoFin MCP tools and report grounded numbers. Follow the plugin's
   `params.offset = pagination.next_offset`.
 - Independent invokes may run in parallel in one turn.
 - Never fabricate figures. If a fetch fails, report the error (including any
-  `reconnect_url`) instead of numbers.
+  `reconnect_url`) instead of numbers. If MosoFin tools are missing or a call
+  returns `Unknown tool`, the connector is not connected in this LLM app —
+  say so and stop; do not treat it as a QuickBooks reconnect.
 - Never output integer tenant ids. Refer to workspaces by name and companies
   by `display_name`; include `ws_…` / `ds_…` handles only in the structured
   part of your result for the caller to reuse.

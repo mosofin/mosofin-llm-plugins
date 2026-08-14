@@ -12,6 +12,12 @@ Wraps the server's `get_skills` tool. Skills are private to the caller and
 scoped per workspace — a skill saved in workspace A is not listed in B.
 Full spec: `docs/mcp-tool-spec.md` §3.5.
 
+## If MosoFin tools are missing
+
+If MosoFin tools are absent or a call returns `Unknown tool`: tell the user
+to enable/connect the MosoFin connector **in this LLM app**, sign in, then
+retry. Do not invent saved skills.
+
 ## Steps
 
 1. Confirm workspace via `list_workspaces` if this chat has not already.

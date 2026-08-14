@@ -19,6 +19,20 @@ Then:
 2. Confirm the workspace for this chat.
 3. Ask a business-data question, or run `/mosofin:query-workspace`.
 
+## Update
+
+Claude Code does not pick up GitHub changes automatically. After this repo
+updates, refresh the marketplace and the plugin:
+
+```text
+/plugin marketplace update financehub
+/plugin update mosofin@financehub
+```
+
+Codex and ChatGPT talk to the live MosoFin MCP server, so server tools update
+without this step. Skill text in this repo updates only after you refresh the
+plugin as above.
+
 ## Skills
 
 | Skill | When to use |

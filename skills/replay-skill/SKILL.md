@@ -15,6 +15,12 @@ Wraps the server's `get_my_skill` tool (consent is server-enforced) plus
 recipe execution via `invoke_datasource_api_tool`. Full spec:
 `docs/mcp-tool-spec.md` §3.6.
 
+## If MosoFin tools are missing
+
+If MosoFin tools are absent or a call returns `Unknown tool`: tell the user
+to enable/connect the MosoFin connector **in this LLM app**, sign in, then
+retry. Do not invent skill contents or figures.
+
 ## Steps
 
 1. Confirm workspace via `list_workspaces` if this chat has not already.
