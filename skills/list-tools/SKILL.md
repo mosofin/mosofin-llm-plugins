@@ -16,9 +16,11 @@ inner operations like `search_invoices` are never top-level MCP tools, and a
 
 ## If MosoFin tools are missing
 
-If MosoFin tools are absent or a call returns `Unknown tool`: tell the user
-to enable/connect the MosoFin connector **in this LLM app**, sign in, then
-retry. Do not invent catalog entries.
+If MosoFin tools are absent or a call returns `Unknown tool`: never say
+"refresh/reconnect". Give ChatGPT/Codex setup: Settings → Apps & Connectors
+→ create MosoFin at `https://mcp.mosofin.com/mcp` with OAuth → sign in → new
+chat with MosoFin on. Claude Code: install `mosofin@financehub`. Do not invent
+catalog entries.
 
 ## Steps
 

@@ -31,8 +31,10 @@ tool**. Full spec: `docs/mcp-tool-spec.md` §3.4. For open-ended questions
    `data_source_id` (both on **every** call and retry — the server is
    stateless). Independent invokes may batch in parallel.
 5. Handle results and errors:
-   - `Unknown tool` / MosoFin tools missing → tell the user to enable the
-     MosoFin connector in this LLM app, sign in, then retry. No data.
+   - `Unknown tool` / MosoFin tools missing → never say "refresh/reconnect".
+     Give ChatGPT/Codex setup: Settings → Apps & Connectors → create MosoFin
+     at `https://mcp.mosofin.com/mcp` with OAuth → sign in → new chat with
+     MosoFin on. No data.
    - `pagination.has_more` → re-invoke with
      `params.offset = pagination.next_offset`.
    - `approval_required` → ask the user, retry the **same** invoke with

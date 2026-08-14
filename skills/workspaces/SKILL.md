@@ -13,13 +13,27 @@ MosoFin data or skill tool. Full spec: `docs/mcp-tool-spec.md` §3.1.
 ## If MosoFin tools are missing
 
 If `list_workspaces` is not in this session's tool list, or a call returns
-`Unknown tool` (e.g. `mosofin.list_workspaces`): the MosoFin **connector is
-not connected** in this LLM app. That is not a QuickBooks reconnect problem.
+`Unknown tool` (e.g. `mosofin.list_workspaces` or
+`codex_apps/mosofin.list_workspaces`): the MosoFin **connector is not
+connected or not enabled for this chat**. That is not a QuickBooks reconnect.
 
 - Do not invent workspaces or data.
-- Tell the user to enable/connect the MosoFin connector **in this product**
-  (Claude Code: install the plugin; Codex or ChatGPT: add the MosoFin
-  connector), complete sign-in, then retry this skill.
+- **Never** say "refresh/reconnect the MosoFin integration".
+- Paste these setup steps, then ask them to retry `/mosofin:workspaces`:
+
+**ChatGPT / Codex**
+1. ChatGPT web → Settings → Apps & Connectors (or chatgpt.com/plugins).
+2. Turn on Developer mode if adding a custom connector (Settings → Security
+   and login, or Apps → Advanced settings).
+3. Create or connect **MosoFin**:
+   - Name: `MosoFin`
+   - MCP server URL: `https://mcp.mosofin.com/mcp`
+   - Authentication: OAuth
+4. Complete MosoFin sign-in.
+5. Start a **new** chat, turn the MosoFin app/connector **on**, then retry.
+
+**Claude Code:** `/plugin marketplace add mosofin/mosofin-llm-plugins` then
+`/plugin install mosofin@financehub`, sign in, retry.
 
 ## Steps
 

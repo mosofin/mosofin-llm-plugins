@@ -6,18 +6,34 @@ the workspace you confirm.
 
 ## Install
 
-In Claude Code:
+### Claude Code
 
 ```text
 /plugin marketplace add mosofin/mosofin-llm-plugins
 /plugin install mosofin@financehub
 ```
 
+Sign in in the browser when prompted.
+
+### ChatGPT and Codex
+
+1. Open ChatGPT on the web → **Settings → Apps & Connectors** (or [chatgpt.com/plugins](https://chatgpt.com/plugins)).
+2. Turn on **Developer mode** if you are adding a custom connector (**Settings → Security and login**, or Apps → Advanced settings).
+3. Create **MosoFin**:
+   - Name: `MosoFin`
+   - MCP server URL: `https://mcp.mosofin.com/mcp`
+   - Authentication: **OAuth**
+4. Complete MosoFin sign-in in the browser.
+5. Start a **new** chat, turn on the MosoFin app/connector, then continue below.
+
+If you see `Unknown tool: mosofin.list_workspaces`, MosoFin is not enabled for
+this chat. Connect it as above (or turn the app on in this conversation). That
+is not a QuickBooks reconnect.
+
 Then:
 
-1. Complete MosoFin sign-in in the browser when prompted.
-2. Confirm the workspace for this chat.
-3. Ask a business-data question, or run `/mosofin:query-workspace`.
+1. Confirm the workspace for this chat.
+2. Ask a business-data question, or run `/mosofin:query-workspace`.
 
 ## Update
 

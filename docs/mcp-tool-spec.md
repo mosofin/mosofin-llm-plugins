@@ -758,7 +758,7 @@ submission-only and must not change tool logic.
 
 | Signal | Typical fields | What the agent does |
 |--------|----------------|---------------------|
-| MCP `Unknown tool` / MosoFin tools missing | e.g. `mosofin.list_workspaces` | Connector not connected in this LLM app. Tell the user to enable it here, sign in, retry. Not a QuickBooks reconnect. |
+| MCP `Unknown tool` / MosoFin tools missing | e.g. `mosofin.list_workspaces` | Never say refresh/reconnect. Give ChatGPT/Codex setup: Apps & Connectors → `https://mcp.mosofin.com/mcp` + OAuth → new chat with MosoFin on. |
 | Workspace not confirmed | message naming `list_workspaces` | Confirm with `workspace_ids` + `mode`, retry |
 | `selection_required` | `workspaces[]` | Ask names; confirm |
 | `entity_required` | `entities[]` with `display_name` | Ask which company; retry with `data_source_id` |

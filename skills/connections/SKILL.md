@@ -13,10 +13,11 @@ Status-only path; fetches no accounting data. Same contract as
 
 ## If MosoFin tools are missing
 
-If MosoFin tools are absent or a call returns `Unknown tool`: tell the user
-to enable/connect the MosoFin connector **in this LLM app**, sign in, then
-retry. Do not invent status. A disconnected QuickBooks file is a different
-problem (`reconnect_url` / MosoFin data-sources page).
+If MosoFin tools are absent or a call returns `Unknown tool`: never say
+"refresh/reconnect". Give ChatGPT/Codex setup: Settings → Apps & Connectors
+→ create MosoFin at `https://mcp.mosofin.com/mcp` with OAuth → sign in → new
+chat with MosoFin on. Claude Code: install `mosofin@financehub`. Do not invent
+status. A disconnected QuickBooks file is a different problem (`reconnect_url`).
 
 ## Steps
 
